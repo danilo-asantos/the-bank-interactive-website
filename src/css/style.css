@@ -57,6 +57,7 @@ nav .texto-preto-menu{
 
 .nav .texto-preto-menu:hover{
     font-weight: 300;
+    text-decoration: underline;
 }
 
 nav .texto-detalhado-menu{
@@ -78,4 +79,10 @@ nav .texto-detalhado-menu:hover{
     cursor: pointer;
     scale: calc(1.07);
     transition: 1.1s ease-out;
+}
+
+@media (max-width: 575px){
+    .container{
+        flex-direction: column;
+    }
 }
