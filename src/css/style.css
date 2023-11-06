@@ -3,7 +3,6 @@
 body{
     height: 100vh;
     width: 100vw;
-    justify-content: space-between;
 }
 
 .container{
@@ -22,6 +21,7 @@ body{
 .logotipo:hover{
     transform: scale(1.1);
     cursor: pointer;
+    transition: 2s ease-out;
 }
 
 .logotipo span{
@@ -32,15 +32,29 @@ body{
     font-size: 20px;
 }
 
-nav{
+.container nav{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     font-family: 'Public Sans', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
+}
+
+.container nav .underline-menu{
+    text-decoration: underline #5BC241 2px;
+    transition: 1.5s;
+    margin-bottom: 7px;
+    color: #000;
+    font-weight: 800;
+}
+
+.container nav .underline-menu:hover{
+    transform: scale(1.0);
+    background-color: #fff;
+    color: #387a27;
 }
 
 nav .texto-preto-menu:hover{
@@ -65,12 +79,12 @@ nav .texto-detalhado-menu{
     color: #fff;
     background-color: #5BC241;
     border-radius: 10px;
-    width: 127px;
+    width: 145px;
     height: 39px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Public Sans', sans-serif;
     font-weight: 300;
 }
@@ -81,8 +95,68 @@ nav .texto-detalhado-menu:hover{
     transition: 1.1s ease-out;
 }
 
-@media (max-width: 575px){
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.banner picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.banner picture .young-woman{
+    border-radius: 30px;
+    width: 80%;
+    transition: 2s ease-in;
+}
+
+@media (max-width: 790px){
     .container{
         flex-direction: column;
+    }
+    
+    .logotipo{
+        margin-bottom: 25px;
+    }
+
+    .container nav{
+        gap: 26px;
+    }
+}
+
+@media (max-width: 647px){
+    .container{
+        flex-direction: column;
+
+    }
+    
+    .container nav{
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container nav div{
+        width: 100%;
+    }
+
+    .container nav .texto-detalhado-menu{
+        width: 60%;
+    }
+}
+
+@media (max-width: 490px){
+    .container nav .texto-detalhado-menu{
+        font-size: 15px;
+        padding: 0px;
     }
 }
