@@ -21,7 +21,7 @@ body{
 
 .logotipo:hover{
     transform: scale(1.1);
-    cursor: all-scroll;
+    cursor: pointer;
 }
 
 .logotipo span{
@@ -43,20 +43,39 @@ nav{
     color: #000;
 }
 
-nav div:hover{
+nav .texto-preto-menu:hover{
     background-color: #5BC241;
     border-radius: 3%;
     transform: scale(1.1);
-}
-
-nav div{
-    padding: 10px;
+    cursor: pointer;
+    color: #fff;
 }
 
 nav .texto-preto-menu{
+    padding: 10px;
+}
 
+.nav .texto-preto-menu:hover{
+    font-weight: 300;
 }
 
 nav .texto-detalhado-menu{
-    
+    padding: 15px;
+    color: #fff;
+    background-color: #5BC241;
+    border-radius: 10px;
+    width: 127px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
+}
+nav .texto-detalhado-menu:hover{
+    background-color: #5BC241;
+    cursor: pointer;
+    scale: calc(1.07);
+    transition: 1.1s ease-out;
 }
